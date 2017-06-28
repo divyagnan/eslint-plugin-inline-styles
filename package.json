@@ -1,6 +1,6 @@
 {
   "name": "@divyagnan/eslint-plugin-inline-styles",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A collection of Eslint rules surrounding the use of inline-styles.",
   "keywords": [
     "eslint",
