@@ -1,5 +1,5 @@
 /**
- * @fileoverview Checks styles for unit values
+ * @fileoverview Checks inline styles for units
  * @author divyagnan
  */
 "use strict";

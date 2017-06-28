@@ -36,14 +36,14 @@ Then configure the rules you want to use under the rules section.
 ```json
 {
     "rules": {
-        "inline-styles/rule-name": 2
+        "inline-styles/units": 2
     }
 }
 ```
 
 ## Supported Rules
 
-* Fill in provided rules here
+* [units](docs/rules/units.md) - Checks inline styles for units 
 
 
 
