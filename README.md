@@ -1,4 +1,4 @@
-# @divyagnan/eslint-plugin-inline-styles
+# @divyagnan/eslint-plugin-inline-styles [![npm version](https://badge.fury.io/js/%40divyagnan%2Feslint-plugin-inline-styles.svg)](https://badge.fury.io/js/%40divyagnan%2Feslint-plugin-inline-styles) [![Build Status](https://travis-ci.org/divyagnan/eslint-plugin-inline-styles.svg?branch=master)](https://travis-ci.org/divyagnan/eslint-plugin-inline-styles)
 
 A collection of Eslint rules surrounding the use of inline-styles.
 
