@@ -17,6 +17,7 @@ const parserOptions = {
   ecmaVersion: 8,
   sourceType: "module",
   ecmaFeatures: {
+    experimentalObjectRestSpread: true,
     jsx: true
   }
 };
@@ -27,6 +28,7 @@ const parserOptions = {
 
 var ruleTester = new RuleTester({ parserOptions });
 ruleTester.run("units", rule, {
+  /** VALID CASES */
   valid: [
     {
       code: `
@@ -35,7 +37,7 @@ ruleTester.run("units", rule, {
             return (
               <div>
                 <span style={{ height: '40px' }} color="red">stuff</span>
-              </div>; 
+              </div>
             )
           }
         }
@@ -48,7 +50,7 @@ ruleTester.run("units", rule, {
             return (
               <div>
                 <span style={{ height: "40px" }} color="red">stuff</span>
-              </div>; 
+              </div>
             )
           }
         }
@@ -61,7 +63,7 @@ ruleTester.run("units", rule, {
             return (
               <div>
                 <App props={{ someProp: 40 }} color="red">stuff</App>
-              </div>; 
+              </div>
             )
           }
         }
@@ -74,7 +76,7 @@ ruleTester.run("units", rule, {
             return (
               <div>
                 <span style={{ color: 'red' }} color="red">stuff</span>
-              </div>; 
+              </div>
             )
           }
         }
@@ -87,7 +89,7 @@ ruleTester.run("units", rule, {
             return (
               <div>
                 <span style={{ color: "red" }} color="red">stuff</span>
-              </div>;
+              </div>
             )
           }
         }
@@ -99,15 +101,15 @@ ruleTester.run("units", rule, {
           render() {
             return (
               <div>
-                <span style={{ height: "40vmin", ...spread }} color="red">stuff</span>
-              </div>;
+                <span style={{ ...spread }} color="red">stuff</span>
+              </div>
             )
           }
         }
       `
     }
   ],
-
+  /** INVALID CASES */
   invalid: [
     {
       code: `
@@ -116,7 +118,7 @@ ruleTester.run("units", rule, {
             return (
               <div>
                 <span style={{ height: 40 }} color="red">stuff</span>
-              </div>;
+              </div>
             )
           }
         }
@@ -135,7 +137,7 @@ ruleTester.run("units", rule, {
             return (
               <div>
                 <span style={{ margin: 40 }} color="red">stuff</span>
-              </div>;
+              </div>
             )
           }
         }
@@ -154,7 +156,7 @@ ruleTester.run("units", rule, {
             return (
               <div>
                 <span style={{ padding: 40 }} color="red">stuff</span>
-              </div>;
+              </div>
             )
           }
         }
@@ -173,7 +175,7 @@ ruleTester.run("units", rule, {
             return (
               <div>
                 <span style={{ marginRight: 40 }} color="red">stuff</span>
-              </div>;
+              </div>
             )
           }
         }
@@ -192,7 +194,7 @@ ruleTester.run("units", rule, {
             return (
               <div>
                 <span style={{ paddingLeft: 40 }} color="red">stuff</span>
-              </div>;
+              </div>
             )
           }
         }
@@ -211,7 +213,7 @@ ruleTester.run("units", rule, {
             return (
               <div>
                 <span style={{ left: 40 }} color="red">stuff</span>
-              </div>;
+              </div>
             )
           }
         }
@@ -230,7 +232,7 @@ ruleTester.run("units", rule, {
             return (
               <div>
                 <span style={{ right: 40 }} color="red">stuff</span>
-              </div>;
+              </div>
             )
           }
         }
