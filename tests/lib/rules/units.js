@@ -107,6 +107,32 @@ ruleTester.run("units", rule, {
           }
         }
       `
+    },
+    {
+      code: `
+        class Component extends React.Component {
+          render() {
+            return (
+              <div>
+                <span style={{ zIndex: 2 }}>stuff</span>
+              </div>
+            )
+          }
+        }
+      `
+    },
+    {
+      code: `
+        class Component extends React.Component {
+          render() {
+            return (
+              <div>
+                <span style={{ flex: 1 }}>stuff</span>
+              </div>
+            )
+          }
+        }
+      `
     }
   ],
   /** INVALID CASES */

@@ -19,6 +19,7 @@
   "dependencies": {
     "lodash.endswith": "^4.2.1",
     "lodash.get": "^4.4.2",
+    "lodash.some": "^4.6.0",
     "requireindex": "~1.1.0"
   },
   "devDependencies": {
