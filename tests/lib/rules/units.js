@@ -133,6 +133,20 @@ ruleTester.run("units", rule, {
           }
         }
       `
+    },
+    {
+      code: `
+        class Component extends React.Component {
+          render() {
+            const num = '40px';
+            return (
+              <div>
+                <span style={{ height: num }}>stuff</span>
+              </div>
+            )
+          }
+        }
+      `
     }
   ],
   /** INVALID CASES */
